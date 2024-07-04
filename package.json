@@ -1,0 +1,26 @@
+{
+  "name": "employee-crud-api",
+  "version": "1.0.0",
+  "description": "Aplicação Crud API em Node.JS que alimentará os 4 principais frameworks do mercado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucioneves/employee-crud-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucioneves/employee-crud-api.git"
+  },
+  "homepage": "https://github.com/lucioneves/employee-crud-api.git",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "^9.6.0",
+    "globals": "^15.8.0",
+    "typescript-eslint": "^7.15.0"
+  }
+}
