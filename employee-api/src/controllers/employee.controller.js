@@ -21,4 +21,12 @@ exports.createEmployee = async(req, res) => {
             employee: { name, job_role, salary, birth, employee_registration}
         },
     });
+
+
+};
+
+//=> Método responsável por listar todos os 'Employees'
+exports.listAllEmployees = async(req, res) => {
+     const response = await db.query('SELECT  * FROM employee ORDER BY name ASC');
+     res.status(200).send(response.rows);
 };
