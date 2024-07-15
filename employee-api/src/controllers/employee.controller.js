@@ -6,7 +6,7 @@
  */
 
 const db = require('../config/database');
-// =>  Método responsavel por criar um novo 'Employee':
+// ==>  Método responsavel por criar um novo 'Employee':
 exports.createEmployee = async(req, res) => {
     const { name, job_role, salary, birth, employee_registration } = req.body;
     const { rows } = await db.query(
@@ -24,20 +24,20 @@ exports.createEmployee = async(req, res) => {
 
 };
 
-// => Método responsável por listar todos os 'Employees'
+// ==> Método responsável por listar todos os 'Employees'
 exports.listAllEmployees = async(req, res) => {
      const response = await db.query('SELECT  * FROM employee ORDER BY name ASC');
      res.status(200).send(response.rows);
 };
 
-// => Método responsável por listar um determinado 'Employee' po Id:
+// ==> Método responsável por listar um determinado 'Employee' po Id:
 exports.findEmployeeById = async(req, res) => {
     const employeeId = req.params.id;
     const response = await db.query('SELECT * FROM employee WHERE employee_id =$1', [employeeId]);
     res.status(200).send(response.rows);
 };
 
-// => Método reponsável por atualizar um determinado 'Employee'por Id:
+// ==> Método reponsável por atualizar um determinado 'Employee'por Id:
 exports.updateEmployeeById = async(req, res) => {
     const employeeId = req.params.id;
     const { name, job_role, salary, birth, employee_registration } = req.body
